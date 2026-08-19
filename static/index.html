@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Competitor Radar — Detect. Understand. Decide.</title>
+  <meta name="description" content="AI-powered competitive intelligence that detects what changed, explains why it matters, and gives your team practical response options — without making the decision for you.">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <!-- Background Grid Overlay -->
+  <div class="bg-grid-overlay"></div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="header-nav">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20M2 12h20"/>
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="6"/>
+            <circle cx="12" cy="12" r="2"/>
+          </svg>
+        </div>
+        <div>
+          <span class="logo-text">Competitor Radar</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#competitors">Competitors</a></li>
+        <li><a href="#intelligence">Intelligence</a></li>
+        <li><a href="#responses">Responses</a></li>
+      </ul>
+
+      <div>
+        <a href="#live-scan" class="btn-primary">Run Competitor Scan</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 1: HERO -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">AI COMPETITIVE INTELLIGENCE</span>
+        <h1 class="hero-headline">
+          Know what your <span class="accent-text">competitors changed</span>.
+        </h1>
+        <p class="hero-subtext">
+          Competitor Radar discovers relevant competitors, detects meaningful changes, and turns those changes into practical strategic options.
+        </p>
+        <div class="hero-actions">
+          <a href="#live-scan" class="btn-primary">Run Competitor Scan →</a>
+          <a href="#how-it-works" class="btn-secondary">See How It Works</a>
+        </div>
+      </div>
+
+      <!-- Hero Animated Radar Composition -->
+      <div class="radar-card-comp">
+        <div class="radar-card-header">
+          <div>
+            <div class="radar-title">COMPETITOR RADAR</div>
+            <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 4px;">3 competitors detected</div>
+          </div>
+          <div class="radar-pulse-dot"></div>
+        </div>
+
+        <div class="radar-items-list">
+          <div class="radar-item">
+            <div>
+              <div class="radar-item-name">Cashfree Payments</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Payouts & Disbursal Rail</div>
+            </div>
+            <span class="badge badge-lime">HIGH CONFIDENCE</span>
+          </div>
+
+          <div class="radar-item">
+            <div>
+              <div class="radar-item-name">RazorpayX</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Neobanking & Payroll</div>
+            </div>
+            <span class="badge badge-muted">INFRASTRUCTURE</span>
+          </div>
+
+          <div class="radar-item">
+            <div>
+              <div class="radar-item-name">PhonePe</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Merchant Payments</div>
+            </div>
+            <span class="badge badge-muted">CONSUMER</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-muted); display: flex; align-items: center; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted);">
+          <span>SIGNAL DETECTOR: ACTIVE</span>
+          <span style="color: var(--accent-lime);">HUMAN DECISION REQUIRED</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: THE PROBLEM -->
+  <section id="problem" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">THE PROBLEM</span>
+        <h2 class="section-title">Competition changes faster than your spreadsheets.</h2>
+      </div>
+
+      <div class="problem-grid">
+        <div class="editorial-card">
+          <div class="card-num">01</div>
+          <h3 class="card-title">DISCOVER</h3>
+          <p class="card-body">Find the competitors that actually matter based on business model, customers, and geography.</p>
+        </div>
+
+        <div class="editorial-card">
+          <div class="card-num">02</div>
+          <h3 class="card-title">DETECT</h3>
+          <p class="card-body">Separate meaningful changes from noise to identify true strategic shifts in real time.</p>
+        </div>
+
+        <div class="editorial-card">
+          <div class="card-num">03</div>
+          <h3 class="card-title">DECIDE</h3>
+          <p class="card-body">Give humans clear, actionable options instead of risky automatic AI execution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: HOW IT WORKS -->
+  <section id="how-it-works" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">WORKFLOW ARCHITECTURE</span>
+        <h2 class="section-title">Three agents. One human decision.</h2>
+        <p class="section-subtitle">A linear pipeline orchestrating specialized agents powered by deployed Lyzr Manager Agent.</p>
+      </div>
+
+      <div class="process-flow">
+        <div class="process-step-card">
+          <div class="step-label">STEP 01 — DISCOVER</div>
+          <h3 class="step-title">Competitor Finder</h3>
+          <span class="step-agent">AGENT 1</span>
+          <p class="step-desc">Finds active competitors based on business model, target customers, geography, and differentiation.</p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="step-label">STEP 02 — ANALYZE</div>
+          <h3 class="step-title">Competitor Analyst</h3>
+          <span class="step-agent">AGENT 2</span>
+          <p class="step-desc">Compares current competitor information against a previous observation benchmark.</p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="step-label">STEP 03 — RESPOND</div>
+          <h3 class="step-title">Response Options</h3>
+          <span class="step-agent">AGENT 3</span>
+          <p class="step-desc">Creates practical strategic response options when a material change is detected.</p>
+        </div>
+      </div>
+
+      <div class="hitl-banner">
+        <div class="hitl-content">
+          <h4>HUMAN IN THE LOOP</h4>
+          <p>The system informs. The human decides.</p>
+        </div>
+        <span class="badge badge-lime">DETECT → INFORM → DECIDE</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: LIVE COMPETITOR SCAN -->
+  <section id="live-scan" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">LIVE SCANNER</span>
+        <h2 class="section-title">Run your competitor radar.</h2>
+        <p class="section-subtitle">Enter your company details to trigger the live Lyzr Competitor Finder agent.</p>
+      </div>
+
+      <div class="form-card">
+        <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
+          <button type="button" id="prefill-btn" class="btn-secondary" style="font-size: 0.85rem; padding: 8px 16px;">
+            ⚡ Prefill PayFlow Demo Data
+          </button>
+        </div>
+
+        <form id="scan-form">
+          <div class="form-grid">
+            <div>
+              <label for="company_name" class="form-label">Company Name</label>
+              <input type="text" id="company_name" class="form-input" placeholder="e.g. PayFlow" required value="PayFlow">
+            </div>
+
+            <div>
+              <label for="region" class="form-label">Region</label>
+              <input type="text" id="region" class="form-input" placeholder="e.g. India, expanding to Southeast Asia." value="India, expanding to Southeast Asia.">
+            </div>
+
+            <div class="form-group-full">
+              <label for="what_we_do" class="form-label">What We Do</label>
+              <input type="text" id="what_we_do" class="form-input" placeholder="e.g. Instant bank-to-bank transfers and small-business payouts." value="Instant bank-to-bank transfers and small-business payouts.">
+            </div>
+
+            <div>
+              <label for="target_customers" class="form-label">Target Customers</label>
+              <input type="text" id="target_customers" class="form-input" placeholder="e.g. Consumers, freelancers and small businesses." value="Consumers, freelancers and small businesses.">
+            </div>
+
+            <div>
+              <label for="differentiator" class="form-label">Differentiator</label>
+              <input type="text" id="differentiator" class="form-input" placeholder="e.g. Sub-second settlement using direct bank rail integration with no wallet." value="Sub-second settlement using direct bank rail integration with no wallet.">
+            </div>
+          </div>
+
+          <div class="form-actions-row">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Connects to Lyzr Manager Agent (6a85ad59)</span>
+            <button type="submit" id="scan-btn" class="btn-primary">DISCOVER COMPETITORS →</button>
+          </div>
+        </form>
+
+        <!-- Loading State -->
+        <div id="scan-loading" style="display: none; text-align: center; padding: 40px 0;">
+          <div class="radar-pulse-dot" style="width: 20px; height: 20px; margin: 0 auto 20px;"></div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 8px;">Scanning competitor landscape...</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">Executing live agent search via Lyzr Manager Agent API</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="scan-error" class="error-card" style="display: none; margin-top: 24px;">
+          <div class="error-title">Unable to complete the competitor scan.</div>
+          <p id="scan-error-msg" class="error-desc">Network or server error encountered while communicating with Lyzr Agent API.</p>
+          <button type="button" onclick="document.getElementById('scan-form').dispatchEvent(new Event('submit'))" class="btn-primary">Try Again</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: COMPETITOR RESULTS -->
+  <section id="competitors" class="section-padding" style="display: none;">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">STAGE 1 DISCOVERY RESULTS</span>
+        <h2 class="section-title">Relevant competitors</h2>
+        <p class="section-subtitle">AI-discovered companies relevant to your business model and target markets.</p>
+      </div>
+
+      <div id="competitor-cards-grid" class="competitors-grid">
+        <!-- Dynamically rendered competitor cards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: COMPETITOR ANALYSIS FORM -->
+  <section id="analysis-form" class="section-padding" style="display: none;">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">STAGE 2 COMPETITOR ANALYSIS</span>
+        <h2 class="section-title">Track competitive change</h2>
+        <p id="selected-comp-header" class="section-subtitle" style="color: var(--accent-lime); font-weight: 700;">Selected Competitor: Cashfree Payments</p>
+      </div>
+
+      <div class="form-card">
+        <form id="observation-form">
+          <input type="hidden" id="selected-comp-name-input" value="Cashfree Payments">
+
+          <div style="margin-bottom: 24px; font-weight: 700; font-size: 1.1rem; color: var(--text-primary);">
+            Previous Observation Benchmark
+          </div>
+
+          <div class="form-grid">
+            <div>
+              <label for="previous_payout_fee" class="form-label">Payout Fee</label>
+              <input type="text" id="previous_payout_fee" class="form-input" value="₹5 per transaction" placeholder="e.g. ₹5 per transaction">
+            </div>
+
+            <div>
+              <label for="previous_settlement" class="form-label">Settlement Speed</label>
+              <input type="text" id="previous_settlement" class="form-input" value="T+1" placeholder="e.g. T+1">
+            </div>
+
+            <div class="form-group-full">
+              <label for="previous_service" class="form-label">Service / Product Scope</label>
+              <input type="text" id="previous_service" class="form-input" value="Bank-account payouts for businesses" placeholder="e.g. Bank-account payouts for businesses">
+            </div>
+
+            <div class="form-group-full">
+              <label for="other_observation" class="form-label">Other Observation (Optional)</label>
+              <input type="text" id="other_observation" class="form-input" placeholder="e.g. Standard API integration without instant refund capabilities.">
+            </div>
+          </div>
+
+          <div class="form-actions-row">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Triggers Competitor Analyst & Response Options Agents</span>
+            <button type="submit" id="analyze-btn" class="btn-primary">ANALYZE CHANGE →</button>
+          </div>
+        </form>
+
+        <!-- Loading State -->
+        <div id="analyze-loading" style="display: none; text-align: center; padding: 40px 0;">
+          <div class="radar-pulse-dot" style="width: 20px; height: 20px; margin: 0 auto 20px;"></div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 8px;">Analyzing competitive changes...</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">Comparing previous benchmark observation against active competitor state</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="analyze-error" class="error-card" style="display: none; margin-top: 24px;">
+          <div class="error-title">Unable to complete the competitor analysis.</div>
+          <p id="analyze-error-msg" class="error-desc">Error occurred during change detection analysis.</p>
+          <button type="button" onclick="document.getElementById('observation-form').dispatchEvent(new Event('submit'))" class="btn-primary">Try Again</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: CHANGE DETECTION -->
+  <section id="intelligence" class="section-padding" style="display: none;">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">INTELLIGENCE REPORT</span>
+        <h2 class="section-title">Competitive Change Intelligence</h2>
+      </div>
+
+      <div id="intelligence-content">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: RESPONSE OPTIONS -->
+  <section id="responses" class="section-padding" style="display: none;">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">STAGE 3 STRATEGIC PATHS</span>
+        <h2 class="section-title">What could <span id="company-target-span">PayFlow</span> do?</h2>
+        <p class="section-subtitle">Three practical paths. One human decision.</p>
+      </div>
+
+      <div id="responses-grid" class="options-grid">
+        <!-- Parsed Response Option Cards -->
+      </div>
+
+      <div class="human-notice-card">
+        <div class="human-notice-icon">🛡️</div>
+        <div>
+          <h4 style="font-size: 1.1rem; color: var(--accent-lime); margin-bottom: 4px;">HUMAN DECISION REQUIRED</h4>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">
+            Competitor Radar provides intelligence and response options. It does not automatically change prices or execute business decisions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: DEMO EXAMPLE / ILLUSTRATIVE WORKFLOW -->
+  <section id="illustrative-workflow" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">ILLUSTRATIVE WORKFLOW</span>
+        <h2 class="section-title">From signal to decision.</h2>
+        <p class="section-subtitle">How Competitor Radar translates competitor updates into strategic options in under 30 seconds.</p>
+      </div>
+
+      <div class="workflow-box">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; padding-bottom: 16px; border-bottom: 1px solid var(--border-muted);">
+          <div>
+            <div style="font-size: 1.25rem; font-weight: 700;">Cashfree Payments</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">Payouts & Disbursal Competitor</div>
+          </div>
+          <span class="badge badge-lime">ILLUSTRATIVE DEMO WORKFLOW</span>
+        </div>
+
+        <div class="workflow-steps">
+          <div class="wf-step">
+            <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; margin-bottom: 8px;">BEFORE</div>
+            <div style="font-size: 1.1rem; font-weight: 700;">₹5 payout fee</div>
+            <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 4px;">T+1 settlement</div>
+          </div>
+
+          <div class="wf-arrow">↓</div>
+
+          <div class="wf-step" style="border-color: var(--border-accent); background: rgba(163, 230, 53, 0.03);">
+            <div style="font-size: 0.75rem; color: var(--accent-lime); font-weight: 700; margin-bottom: 8px;">CHANGE DETECTED</div>
+            <div style="font-size: 1.1rem; font-weight: 700; color: var(--accent-lime);">Payout fee updated to ₹2</div>
+            <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 4px;">Same-day settlement added</div>
+          </div>
+
+          <div class="wf-arrow">↓</div>
+
+          <div class="wf-step">
+            <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; margin-bottom: 8px;">AFTER</div>
+            <div style="font-size: 1.1rem; font-weight: 700;">Current market findings evaluated</div>
+            <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 4px;">Strategic assessment generated</div>
+          </div>
+
+          <div class="wf-arrow">↓</div>
+
+          <div class="wf-step" style="border-color: rgba(255, 255, 255, 0.2);">
+            <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; margin-bottom: 8px;">3 RESPONSE OPTIONS</div>
+            <div style="font-size: 0.9rem; font-weight: 600;">1. Hold & Monitor</div>
+            <div style="font-size: 0.9rem; font-weight: 600;">2. Positioning Defense</div>
+            <div style="font-size: 0.9rem; font-weight: 600;">3. Commercial Response</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10: HUMAN-IN-THE-LOOP STATEMENT -->
+  <section id="human-in-loop" class="section-padding">
+    <div class="container">
+      <div style="background: var(--bg-card); border: 1px solid var(--border-accent); border-radius: var(--radius-xl); padding: 60px 48px; text-align: center; box-shadow: 0 0 50px rgba(163, 230, 53, 0.05);">
+        <span class="eyebrow" style="margin-bottom: 24px;">CORE PHILOSOPHY</span>
+        <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 20px;">
+          AI detects. <span class="accent-text">Humans decide.</span>
+        </h2>
+        <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 720px; margin: 0 auto 40px; line-height: 1.6;">
+          Competitor Radar automates research and analysis without removing strategic judgment from the people responsible for the business.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: left; max-width: 900px; margin: 0 auto;">
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-muted); border-radius: var(--radius-lg); padding: 24px;">
+            <div style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--accent-lime); margin-bottom: 8px;">01</div>
+            <div style="font-weight: 700; margin-bottom: 4px;">No automatic price changes</div>
+            <div style="font-size: 0.88rem; color: var(--text-secondary);">System never mutates commercial models automatically.</div>
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-muted); border-radius: var(--radius-lg); padding: 24px;">
+            <div style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--accent-lime); margin-bottom: 8px;">02</div>
+            <div style="font-weight: 700; margin-bottom: 4px;">No automatic actions</div>
+            <div style="font-size: 0.88rem; color: var(--text-secondary);">No direct execution without human authorization.</div>
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-muted); border-radius: var(--radius-lg); padding: 24px;">
+            <div style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--accent-lime); margin-bottom: 8px;">03</div>
+            <div style="font-weight: 700; margin-bottom: 4px;">Human retains control</div>
+            <div style="font-size: 0.88rem; color: var(--text-secondary);">Human selects competitor and chooses final response path.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 11: FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-row">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 12px;">
+            <div class="logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="12" cy="12" r="10"/>
+                <circle cx="12" cy="12" r="4"/>
+              </svg>
+            </div>
+            <span class="logo-text">Competitor Radar</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Competitive intelligence for faster decisions.
+          </p>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#competitors">Competitors</a></li>
+          <li><a href="#intelligence">Intelligence</a></li>
+          <li><a href="#responses">Responses</a></li>
+        </ul>
+
+        <div>
+          <span class="badge badge-muted">Powered by AI • Human decision required</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
